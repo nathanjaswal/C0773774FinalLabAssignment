@@ -14,6 +14,12 @@
 		18DB7E6123DBAADD007A388B /* C0773774FinalLabAssignment.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 18DB7E5F23DBAADD007A388B /* C0773774FinalLabAssignment.xcdatamodeld */; };
 		18DB7E6323DBAAE9007A388B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18DB7E6223DBAAE9007A388B /* Assets.xcassets */; };
 		18DB7E6623DBAAE9007A388B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18DB7E6423DBAAE9007A388B /* LaunchScreen.storyboard */; };
+		18DB7E7023DBABE5007A388B /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DB7E6E23DBABE5007A388B /* PersistenceManager.swift */; };
+		18DB7E7123DBABE5007A388B /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DB7E6F23DBABE5007A388B /* Helper.swift */; };
+		18DB7E7423DBAD0B007A388B /* Tasks+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DB7E7223DBAD0B007A388B /* Tasks+CoreDataClass.swift */; };
+		18DB7E7523DBAD0B007A388B /* Tasks+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DB7E7323DBAD0B007A388B /* Tasks+CoreDataProperties.swift */; };
+		18DB7E7823DBAEE3007A388B /* VCTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DB7E7723DBAEE3007A388B /* VCTableViewCell.swift */; };
+		18DB7E7A23DBAEF1007A388B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DB7E7923DBAEF1007A388B /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +32,12 @@
 		18DB7E6223DBAAE9007A388B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18DB7E6523DBAAE9007A388B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		18DB7E6723DBAAE9007A388B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18DB7E6E23DBABE5007A388B /* PersistenceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
+		18DB7E6F23DBABE5007A388B /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		18DB7E7223DBAD0B007A388B /* Tasks+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Tasks+CoreDataClass.swift"; path = "C0773774FinalLabAssignment/Database/Tasks+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		18DB7E7323DBAD0B007A388B /* Tasks+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Tasks+CoreDataProperties.swift"; path = "C0773774FinalLabAssignment/Database/Tasks+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		18DB7E7723DBAEE3007A388B /* VCTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCTableViewCell.swift; sourceTree = "<group>"; };
+		18DB7E7923DBAEF1007A388B /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,13 +73,35 @@
 				18DB7E5623DBAADD007A388B /* AppDelegate.swift */,
 				18DB7E5823DBAADD007A388B /* SceneDelegate.swift */,
 				18DB7E5A23DBAADD007A388B /* ViewController.swift */,
+				18DB7E7723DBAEE3007A388B /* VCTableViewCell.swift */,
+				18DB7E7923DBAEF1007A388B /* DetailViewController.swift */,
 				18DB7E5C23DBAADD007A388B /* Main.storyboard */,
 				18DB7E6223DBAAE9007A388B /* Assets.xcassets */,
 				18DB7E6423DBAAE9007A388B /* LaunchScreen.storyboard */,
 				18DB7E6723DBAAE9007A388B /* Info.plist */,
 				18DB7E5F23DBAADD007A388B /* C0773774FinalLabAssignment.xcdatamodeld */,
+				18DB7E7623DBAD10007A388B /* Database */,
+				18DB7E6D23DBABC8007A388B /* Helper */,
 			);
 			path = C0773774FinalLabAssignment;
+			sourceTree = "<group>";
+		};
+		18DB7E6D23DBABC8007A388B /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				18DB7E6F23DBABE5007A388B /* Helper.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		18DB7E7623DBAD10007A388B /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				18DB7E6E23DBABE5007A388B /* PersistenceManager.swift */,
+				18DB7E7223DBAD0B007A388B /* Tasks+CoreDataClass.swift */,
+				18DB7E7323DBAD0B007A388B /* Tasks+CoreDataProperties.swift */,
+			);
+			path = Database;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,9 +176,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				18DB7E5B23DBAADD007A388B /* ViewController.swift in Sources */,
+				18DB7E7023DBABE5007A388B /* PersistenceManager.swift in Sources */,
+				18DB7E7523DBAD0B007A388B /* Tasks+CoreDataProperties.swift in Sources */,
+				18DB7E7823DBAEE3007A388B /* VCTableViewCell.swift in Sources */,
+				18DB7E7423DBAD0B007A388B /* Tasks+CoreDataClass.swift in Sources */,
 				18DB7E5723DBAADD007A388B /* AppDelegate.swift in Sources */,
 				18DB7E5923DBAADD007A388B /* SceneDelegate.swift in Sources */,
+				18DB7E7A23DBAEF1007A388B /* DetailViewController.swift in Sources */,
 				18DB7E6123DBAADD007A388B /* C0773774FinalLabAssignment.xcdatamodeld in Sources */,
+				18DB7E7123DBABE5007A388B /* Helper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
